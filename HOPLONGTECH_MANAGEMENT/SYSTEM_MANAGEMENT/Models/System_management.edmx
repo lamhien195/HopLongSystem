@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SYSTEM_DATABASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BANG_CHAM_CONG">
+          <Key>
+            <PropertyRef Name="CHAM_CONG_ID" />
+          </Key>
+          <Property Name="CHAM_CONG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USER_ID" Type="int" Nullable="false" />
+          <Property Name="NGAY_CHUAN" Type="nvarchar" MaxLength="256" />
+          <Property Name="GIO_DI_MUON" Type="nvarchar" MaxLength="256" />
+          <Property Name="GIO_VE_SOM" Type="nvarchar" MaxLength="256" />
+          <Property Name="TANG_CA_NGAY_THUONG" Type="nvarchar" MaxLength="256" />
+          <Property Name="TANG_CA_NGAY_LE" Type="nvarchar" MaxLength="256" />
+          <Property Name="SO_LAN_QUEN_CHAM" Type="nvarchar" MaxLength="256" />
+          <Property Name="SO_NGAY_NGHI" Type="nvarchar" MaxLength="256" />
+          <Property Name="CONG_THUC_TE" Type="nvarchar" MaxLength="256" />
+          <Property Name="UNG_LUONG" Type="nvarchar" MaxLength="256" />
+          <Property Name="GHI_CHU" Type="nvarchar" MaxLength="256" />
+          <Property Name="THANG_CHAM_CONG" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="BANG_LUONG">
+          <Key>
+            <PropertyRef Name="LUONG_ID" />
+          </Key>
+          <Property Name="LUONG_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USER_ID" Type="int" Nullable="false" />
+          <Property Name="LUONG_CO_BAN" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_BAO_HIEM" Type="nvarchar" MaxLength="256" />
+          <Property Name="PHU_CAP_AN_TRUA" Type="nvarchar" MaxLength="256" />
+          <Property Name="PHU_CAP_DI_LAI_DIEN_THOAI" Type="nvarchar" MaxLength="256" />
+          <Property Name="PHU_CAP_THUONG_DOANH_SO" Type="nvarchar" MaxLength="256" />
+          <Property Name="PHU_CAP_TRACH_NHIEM" Type="nvarchar" MaxLength="256" />
+          <Property Name="CONG_CO_BAN" Type="nvarchar" MaxLength="256" />
+          <Property Name="CONG_CO_BAN_NGAY" Type="nvarchar" MaxLength="256" />
+          <Property Name="CONG_CO_BAN_GIO" Type="nvarchar" MaxLength="256" />
+          <Property Name="BAO_HIEM_CONG_TY" Type="nvarchar" MaxLength="256" />
+          <Property Name="BAO_HIEM_NHAN_VIEN" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_THUC_TE_CONG_LAM_THUC" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_THUC_TE_SO_TIEN" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_LAM_THEM_CONG_NGAY_THUONG" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_THUONG" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_LAM_THEM_CONG_NGAY_NGHI" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_NGHI" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_LAM_THEM_CONG_NGAY_LE" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_LE" Type="nvarchar" MaxLength="256" />
+          <Property Name="TONG_TIEN_CONG" Type="nvarchar" MaxLength="256" />
+          <Property Name="TAM_UNG" Type="nvarchar" MaxLength="256" />
+          <Property Name="GIO_DI_TRE" Type="nvarchar" MaxLength="256" />
+          <Property Name="PHAT_DI_TRE" Type="nvarchar" MaxLength="256" />
+          <Property Name="CONG_DOAN" Type="nvarchar" MaxLength="256" />
+          <Property Name="LUONG_LAO_CONG" Type="nvarchar" MaxLength="256" />
+          <Property Name="THUC_LINH" Type="nvarchar" MaxLength="256" />
+          <Property Name="THANG_LINH_LUONG" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="GHI_CHU_CONG_VIEC">
+          <Key>
+            <PropertyRef Name="NOTED_ID" />
+          </Key>
+          <Property Name="NOTED_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USER_ID" Type="int" Nullable="false" />
+          <Property Name="DATE_NOTED" Type="date" />
+          <Property Name="NOTED_NAME" Type="nvarchar" MaxLength="256" />
+          <Property Name="NOTED_INFO" Type="nvarchar(max)" />
+          <Property Name="IS_DONE" Type="tinyint" />
+          <Property Name="DATE_DONE" Type="date" />
+        </EntityType>
+        <EntityType Name="LIST_CONTROLLERS">
+          <Key>
+            <PropertyRef Name="CONTROLLER_ID" />
+          </Key>
+          <Property Name="CONTROLLER_ID" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="CONTROLLER_NAME" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LIST_PERMISSIONS">
+          <Key>
+            <PropertyRef Name="PERMISSION_ID" />
+          </Key>
+          <Property Name="PERMISSION_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PERMISSION_NAME" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="256" />
+          <Property Name="CONTROLLER_ID" Type="varchar" MaxLength="64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USER_PERMISSION">
+          <Key>
+            <PropertyRef Name="PERMISSION_ID" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="PERMISSION_ID" Type="int" Nullable="false" />
+          <Property Name="USER_ID" Type="int" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="FULLNAME" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="256" />
+          <Property Name="AVATAR" Type="varchar" MaxLength="256" />
+          <Property Name="IS_ADMIN" Type="tinyint" />
+          <Property Name="ALLOWED" Type="tinyint" />
+        </EntityType>
+        <Association Name="FK__BANG_CHAM__USER___1ED998B2">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="BANG_CHAM_CONG" Type="Self.BANG_CHAM_CONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="BANG_CHAM_CONG">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BANG_LUON__USER___1BFD2C07">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="BANG_LUONG" Type="Self.BANG_LUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="BANG_LUONG">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GHI_CHU_C__USER___49C3F6B7">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="GHI_CHU_CONG_VIEC" Type="Self.GHI_CHU_CONG_VIEC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="GHI_CHU_CONG_VIEC">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USER_PERM__PERMI__2B3F6F97">
+          <End Role="LIST_PERMISSIONS" Type="Self.LIST_PERMISSIONS" Multiplicity="1" />
+          <End Role="USER_PERMISSION" Type="Self.USER_PERMISSION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LIST_PERMISSIONS">
+              <PropertyRef Name="PERMISSION_ID" />
+            </Principal>
+            <Dependent Role="USER_PERMISSION">
+              <PropertyRef Name="PERMISSION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USER_PERM__USER___2C3393D0">
+          <End Role="USERS" Type="Self.USERS" Multiplicity="1" />
+          <End Role="USER_PERMISSION" Type="Self.USER_PERMISSION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="USER_PERMISSION">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SYSTEM_DATABASEModelStoreContainer">
+          <EntitySet Name="BANG_CHAM_CONG" EntityType="Self.BANG_CHAM_CONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BANG_LUONG" EntityType="Self.BANG_LUONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GHI_CHU_CONG_VIEC" EntityType="Self.GHI_CHU_CONG_VIEC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LIST_CONTROLLERS" EntityType="Self.LIST_CONTROLLERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LIST_PERMISSIONS" EntityType="Self.LIST_PERMISSIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USER_PERMISSION" EntityType="Self.USER_PERMISSION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__BANG_CHAM__USER___1ED998B2" Association="Self.FK__BANG_CHAM__USER___1ED998B2">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="BANG_CHAM_CONG" EntitySet="BANG_CHAM_CONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BANG_LUON__USER___1BFD2C07" Association="Self.FK__BANG_LUON__USER___1BFD2C07">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="BANG_LUONG" EntitySet="BANG_LUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GHI_CHU_C__USER___49C3F6B7" Association="Self.FK__GHI_CHU_C__USER___49C3F6B7">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="GHI_CHU_CONG_VIEC" EntitySet="GHI_CHU_CONG_VIEC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USER_PERM__PERMI__2B3F6F97" Association="Self.FK__USER_PERM__PERMI__2B3F6F97">
+            <End Role="LIST_PERMISSIONS" EntitySet="LIST_PERMISSIONS" />
+            <End Role="USER_PERMISSION" EntitySet="USER_PERMISSION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USER_PERM__USER___2C3393D0" Association="Self.FK__USER_PERM__USER___2C3393D0">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="USER_PERMISSION" EntitySet="USER_PERMISSION" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SYSTEM_DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BANG_CHAM_CONG">
+          <Key>
+            <PropertyRef Name="CHAM_CONG_ID" />
+          </Key>
+          <Property Name="CHAM_CONG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USER_ID" Type="Int32" Nullable="false" />
+          <Property Name="NGAY_CHUAN" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="GIO_DI_MUON" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="GIO_VE_SOM" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="TANG_CA_NGAY_THUONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="TANG_CA_NGAY_LE" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SO_LAN_QUEN_CHAM" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SO_NGAY_NGHI" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CONG_THUC_TE" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="UNG_LUONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="GHI_CHU" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="THANG_CHAM_CONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="USER" Relationship="Self.FK__BANG_CHAM__USER___1ED998B2" FromRole="BANG_CHAM_CONG" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="BANG_LUONG">
+          <Key>
+            <PropertyRef Name="LUONG_ID" />
+          </Key>
+          <Property Name="LUONG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USER_ID" Type="Int32" Nullable="false" />
+          <Property Name="LUONG_CO_BAN" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_BAO_HIEM" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PHU_CAP_AN_TRUA" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PHU_CAP_DI_LAI_DIEN_THOAI" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PHU_CAP_THUONG_DOANH_SO" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PHU_CAP_TRACH_NHIEM" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CONG_CO_BAN" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CONG_CO_BAN_NGAY" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CONG_CO_BAN_GIO" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="BAO_HIEM_CONG_TY" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="BAO_HIEM_NHAN_VIEN" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_THUC_TE_CONG_LAM_THUC" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_THUC_TE_SO_TIEN" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_LAM_THEM_CONG_NGAY_THUONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_THUONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_LAM_THEM_CONG_NGAY_NGHI" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_NGHI" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_LAM_THEM_CONG_NGAY_LE" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_LE" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="TONG_TIEN_CONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="TAM_UNG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="GIO_DI_TRE" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PHAT_DI_TRE" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CONG_DOAN" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LUONG_LAO_CONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="THUC_LINH" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="THANG_LINH_LUONG" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="USER" Relationship="Self.FK__BANG_LUON__USER___1BFD2C07" FromRole="BANG_LUONG" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="LIST_CONTROLLERS">
+          <Key>
+            <PropertyRef Name="CONTROLLER_ID" />
+          </Key>
+          <Property Name="CONTROLLER_ID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CONTROLLER_NAME" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="LIST_PERMISSIONS" Relationship="Self.FK__LIST_PERM__CONTR__286302EC" FromRole="LIST_CONTROLLERS" ToRole="LIST_PERMISSIONS" />
+        </EntityType>
+        <EntityType Name="LIST_PERMISSIONS">
+          <Key>
+            <PropertyRef Name="PERMISSION_ID" />
+          </Key>
+          <Property Name="PERMISSION_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PERMISSION_NAME" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CONTROLLER_ID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="LIST_CONTROLLERS" Relationship="Self.FK__LIST_PERM__CONTR__286302EC" FromRole="LIST_PERMISSIONS" ToRole="LIST_CONTROLLERS" />
+          <NavigationProperty Name="USER_PERMISSION" Relationship="Self.FK__USER_PERM__PERMI__2B3F6F97" FromRole="LIST_PERMISSIONS" ToRole="USER_PERMISSION" />
+        </EntityType>
+        <EntityType Name="USER_PERMISSION">
+          <Key>
+            <PropertyRef Name="PERMISSION_ID" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="PERMISSION_ID" Type="Int32" Nullable="false" />
+          <Property Name="USER_ID" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LIST_PERMISSIONS" Relationship="Self.FK__USER_PERM__PERMI__2B3F6F97" FromRole="USER_PERMISSION" ToRole="LIST_PERMISSIONS" />
+          <NavigationProperty Name="USER" Relationship="Self.FK__USER_PERM__USER___2C3393D0" FromRole="USER_PERMISSION" ToRole="USERS" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FULLNAME" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="AVATAR" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="IS_ADMIN" Type="Byte" />
+          <Property Name="ALLOWED" Type="Byte" />
+          <NavigationProperty Name="BANG_CHAM_CONG" Relationship="Self.FK__BANG_CHAM__USER___1ED998B2" FromRole="USERS" ToRole="BANG_CHAM_CONG" />
+          <NavigationProperty Name="BANG_LUONG" Relationship="Self.FK__BANG_LUON__USER___1BFD2C07" FromRole="USERS" ToRole="BANG_LUONG" />
+          <NavigationProperty Name="USER_PERMISSION" Relationship="Self.FK__USER_PERM__USER___2C3393D0" FromRole="USERS" ToRole="USER_PERMISSION" />
+          <NavigationProperty Name="GHI_CHU_CONG_VIEC" Relationship="SYSTEM_DATABASEModel.FK__GHI_CHU_C__USER___49C3F6B7" FromRole="USER" ToRole="GHI_CHU_CONG_VIEC" />
+        </EntityType>
+        <Association Name="FK__BANG_CHAM__USER___1ED998B2">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="BANG_CHAM_CONG" Type="Self.BANG_CHAM_CONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="BANG_CHAM_CONG">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BANG_LUON__USER___1BFD2C07">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="BANG_LUONG" Type="Self.BANG_LUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="BANG_LUONG">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LIST_PERM__CONTR__286302EC">
+          <End Role="LIST_CONTROLLERS" Type="Self.LIST_CONTROLLERS" Multiplicity="1" />
+          <End Role="LIST_PERMISSIONS" Type="Self.LIST_PERMISSIONS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LIST_CONTROLLERS">
+              <PropertyRef Name="CONTROLLER_ID" />
+            </Principal>
+            <Dependent Role="LIST_PERMISSIONS">
+              <PropertyRef Name="CONTROLLER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USER_PERM__PERMI__2B3F6F97">
+          <End Role="LIST_PERMISSIONS" Type="Self.LIST_PERMISSIONS" Multiplicity="1" />
+          <End Role="USER_PERMISSION" Type="Self.USER_PERMISSION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LIST_PERMISSIONS">
+              <PropertyRef Name="PERMISSION_ID" />
+            </Principal>
+            <Dependent Role="USER_PERMISSION">
+              <PropertyRef Name="PERMISSION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USER_PERM__USER___2C3393D0">
+          <End Role="USERS" Type="Self.USER" Multiplicity="1" />
+          <End Role="USER_PERMISSION" Type="Self.USER_PERMISSION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="USER_PERMISSION">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SYSTEM_DATABASEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BANG_CHAM_CONG" EntityType="Self.BANG_CHAM_CONG" />
+          <EntitySet Name="BANG_LUONG" EntityType="Self.BANG_LUONG" />
+          <EntitySet Name="LIST_CONTROLLERS" EntityType="Self.LIST_CONTROLLERS" />
+          <EntitySet Name="LIST_PERMISSIONS" EntityType="Self.LIST_PERMISSIONS" />
+          <EntitySet Name="USER_PERMISSION" EntityType="Self.USER_PERMISSION" />
+          <EntitySet Name="USERS" EntityType="Self.USER" />
+          <AssociationSet Name="FK__BANG_CHAM__USER___1ED998B2" Association="Self.FK__BANG_CHAM__USER___1ED998B2">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="BANG_CHAM_CONG" EntitySet="BANG_CHAM_CONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BANG_LUON__USER___1BFD2C07" Association="Self.FK__BANG_LUON__USER___1BFD2C07">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="BANG_LUONG" EntitySet="BANG_LUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LIST_PERM__CONTR__286302EC" Association="Self.FK__LIST_PERM__CONTR__286302EC">
+            <End Role="LIST_CONTROLLERS" EntitySet="LIST_CONTROLLERS" />
+            <End Role="LIST_PERMISSIONS" EntitySet="LIST_PERMISSIONS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USER_PERM__PERMI__2B3F6F97" Association="Self.FK__USER_PERM__PERMI__2B3F6F97">
+            <End Role="LIST_PERMISSIONS" EntitySet="LIST_PERMISSIONS" />
+            <End Role="USER_PERMISSION" EntitySet="USER_PERMISSION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USER_PERM__USER___2C3393D0" Association="Self.FK__USER_PERM__USER___2C3393D0">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="USER_PERMISSION" EntitySet="USER_PERMISSION" />
+          </AssociationSet>
+          <EntitySet Name="GHI_CHU_CONG_VIEC" EntityType="SYSTEM_DATABASEModel.GHI_CHU_CONG_VIEC" />
+          <AssociationSet Name="FK__GHI_CHU_C__USER___49C3F6B7" Association="SYSTEM_DATABASEModel.FK__GHI_CHU_C__USER___49C3F6B7">
+            <End Role="USER" EntitySet="USERS" />
+            <End Role="GHI_CHU_CONG_VIEC" EntitySet="GHI_CHU_CONG_VIEC" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GHI_CHU_CONG_VIEC">
+          <Key>
+            <PropertyRef Name="NOTED_ID" />
+          </Key>
+          <Property Name="NOTED_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USER_ID" Type="Int32" Nullable="false" />
+          <Property Name="DATE_NOTED" Type="DateTime" Precision="0" />
+          <Property Name="NOTED_NAME" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="NOTED_INFO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IS_DONE" Type="Byte" />
+          <Property Name="DATE_DONE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="USER" Relationship="SYSTEM_DATABASEModel.FK__GHI_CHU_C__USER___49C3F6B7" FromRole="GHI_CHU_CONG_VIEC" ToRole="USER" />
+        </EntityType>
+        <Association Name="FK__GHI_CHU_C__USER___49C3F6B7">
+          <End Type="SYSTEM_DATABASEModel.USER" Role="USER" Multiplicity="1" />
+          <End Type="SYSTEM_DATABASEModel.GHI_CHU_CONG_VIEC" Role="GHI_CHU_CONG_VIEC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USER">
+              <PropertyRef Name="USER_ID" />
+            </Principal>
+            <Dependent Role="GHI_CHU_CONG_VIEC">
+              <PropertyRef Name="USER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SYSTEM_DATABASEModelStoreContainer" CdmEntityContainer="SYSTEM_DATABASEEntities">
+          <EntitySetMapping Name="BANG_CHAM_CONG">
+            <EntityTypeMapping TypeName="SYSTEM_DATABASEModel.BANG_CHAM_CONG">
+              <MappingFragment StoreEntitySet="BANG_CHAM_CONG">
+                <ScalarProperty Name="CHAM_CONG_ID" ColumnName="CHAM_CONG_ID" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="NGAY_CHUAN" ColumnName="NGAY_CHUAN" />
+                <ScalarProperty Name="GIO_DI_MUON" ColumnName="GIO_DI_MUON" />
+                <ScalarProperty Name="GIO_VE_SOM" ColumnName="GIO_VE_SOM" />
+                <ScalarProperty Name="TANG_CA_NGAY_THUONG" ColumnName="TANG_CA_NGAY_THUONG" />
+                <ScalarProperty Name="TANG_CA_NGAY_LE" ColumnName="TANG_CA_NGAY_LE" />
+                <ScalarProperty Name="SO_LAN_QUEN_CHAM" ColumnName="SO_LAN_QUEN_CHAM" />
+                <ScalarProperty Name="SO_NGAY_NGHI" ColumnName="SO_NGAY_NGHI" />
+                <ScalarProperty Name="CONG_THUC_TE" ColumnName="CONG_THUC_TE" />
+                <ScalarProperty Name="UNG_LUONG" ColumnName="UNG_LUONG" />
+                <ScalarProperty Name="GHI_CHU" ColumnName="GHI_CHU" />
+                <ScalarProperty Name="THANG_CHAM_CONG" ColumnName="THANG_CHAM_CONG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BANG_LUONG">
+            <EntityTypeMapping TypeName="SYSTEM_DATABASEModel.BANG_LUONG">
+              <MappingFragment StoreEntitySet="BANG_LUONG">
+                <ScalarProperty Name="LUONG_ID" ColumnName="LUONG_ID" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="LUONG_CO_BAN" ColumnName="LUONG_CO_BAN" />
+                <ScalarProperty Name="LUONG_BAO_HIEM" ColumnName="LUONG_BAO_HIEM" />
+                <ScalarProperty Name="PHU_CAP_AN_TRUA" ColumnName="PHU_CAP_AN_TRUA" />
+                <ScalarProperty Name="PHU_CAP_DI_LAI_DIEN_THOAI" ColumnName="PHU_CAP_DI_LAI_DIEN_THOAI" />
+                <ScalarProperty Name="PHU_CAP_THUONG_DOANH_SO" ColumnName="PHU_CAP_THUONG_DOANH_SO" />
+                <ScalarProperty Name="PHU_CAP_TRACH_NHIEM" ColumnName="PHU_CAP_TRACH_NHIEM" />
+                <ScalarProperty Name="CONG_CO_BAN" ColumnName="CONG_CO_BAN" />
+                <ScalarProperty Name="CONG_CO_BAN_NGAY" ColumnName="CONG_CO_BAN_NGAY" />
+                <ScalarProperty Name="CONG_CO_BAN_GIO" ColumnName="CONG_CO_BAN_GIO" />
+                <ScalarProperty Name="BAO_HIEM_CONG_TY" ColumnName="BAO_HIEM_CONG_TY" />
+                <ScalarProperty Name="BAO_HIEM_NHAN_VIEN" ColumnName="BAO_HIEM_NHAN_VIEN" />
+                <ScalarProperty Name="LUONG_THUC_TE_CONG_LAM_THUC" ColumnName="LUONG_THUC_TE_CONG_LAM_THUC" />
+                <ScalarProperty Name="LUONG_THUC_TE_SO_TIEN" ColumnName="LUONG_THUC_TE_SO_TIEN" />
+                <ScalarProperty Name="LUONG_LAM_THEM_CONG_NGAY_THUONG" ColumnName="LUONG_LAM_THEM_CONG_NGAY_THUONG" />
+                <ScalarProperty Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_THUONG" ColumnName="LUONG_LAM_THEM_TIEN_CONG_NGAY_THUONG" />
+                <ScalarProperty Name="LUONG_LAM_THEM_CONG_NGAY_NGHI" ColumnName="LUONG_LAM_THEM_CONG_NGAY_NGHI" />
+                <ScalarProperty Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_NGHI" ColumnName="LUONG_LAM_THEM_TIEN_CONG_NGAY_NGHI" />
+                <ScalarProperty Name="LUONG_LAM_THEM_CONG_NGAY_LE" ColumnName="LUONG_LAM_THEM_CONG_NGAY_LE" />
+                <ScalarProperty Name="LUONG_LAM_THEM_TIEN_CONG_NGAY_LE" ColumnName="LUONG_LAM_THEM_TIEN_CONG_NGAY_LE" />
+                <ScalarProperty Name="TONG_TIEN_CONG" ColumnName="TONG_TIEN_CONG" />
+                <ScalarProperty Name="TAM_UNG" ColumnName="TAM_UNG" />
+                <ScalarProperty Name="GIO_DI_TRE" ColumnName="GIO_DI_TRE" />
+                <ScalarProperty Name="PHAT_DI_TRE" ColumnName="PHAT_DI_TRE" />
+                <ScalarProperty Name="CONG_DOAN" ColumnName="CONG_DOAN" />
+                <ScalarProperty Name="LUONG_LAO_CONG" ColumnName="LUONG_LAO_CONG" />
+                <ScalarProperty Name="THUC_LINH" ColumnName="THUC_LINH" />
+                <ScalarProperty Name="THANG_LINH_LUONG" ColumnName="THANG_LINH_LUONG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LIST_CONTROLLERS">
+            <EntityTypeMapping TypeName="SYSTEM_DATABASEModel.LIST_CONTROLLERS">
+              <MappingFragment StoreEntitySet="LIST_CONTROLLERS">
+                <ScalarProperty Name="CONTROLLER_ID" ColumnName="CONTROLLER_ID" />
+                <ScalarProperty Name="CONTROLLER_NAME" ColumnName="CONTROLLER_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LIST_PERMISSIONS">
+            <EntityTypeMapping TypeName="SYSTEM_DATABASEModel.LIST_PERMISSIONS">
+              <MappingFragment StoreEntitySet="LIST_PERMISSIONS">
+                <ScalarProperty Name="PERMISSION_ID" ColumnName="PERMISSION_ID" />
+                <ScalarProperty Name="PERMISSION_NAME" ColumnName="PERMISSION_NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CONTROLLER_ID" ColumnName="CONTROLLER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_PERMISSION">
+            <EntityTypeMapping TypeName="SYSTEM_DATABASEModel.USER_PERMISSION">
+              <MappingFragment StoreEntitySet="USER_PERMISSION">
+                <ScalarProperty Name="PERMISSION_ID" ColumnName="PERMISSION_ID" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="SYSTEM_DATABASEModel.USER">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="AVATAR" ColumnName="AVATAR" />
+                <ScalarProperty Name="IS_ADMIN" ColumnName="IS_ADMIN" />
+                <ScalarProperty Name="ALLOWED" ColumnName="ALLOWED" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GHI_CHU_CONG_VIEC">
+            <EntityTypeMapping TypeName="SYSTEM_DATABASEModel.GHI_CHU_CONG_VIEC">
+              <MappingFragment StoreEntitySet="GHI_CHU_CONG_VIEC">
+                <ScalarProperty Name="DATE_DONE" ColumnName="DATE_DONE" />
+                <ScalarProperty Name="IS_DONE" ColumnName="IS_DONE" />
+                <ScalarProperty Name="NOTED_INFO" ColumnName="NOTED_INFO" />
+                <ScalarProperty Name="NOTED_NAME" ColumnName="NOTED_NAME" />
+                <ScalarProperty Name="DATE_NOTED" ColumnName="DATE_NOTED" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="NOTED_ID" ColumnName="NOTED_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
