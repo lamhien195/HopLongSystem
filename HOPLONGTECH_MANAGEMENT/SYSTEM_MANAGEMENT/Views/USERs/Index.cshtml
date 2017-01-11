@@ -49,6 +49,7 @@
             @Html.ActionLink("Details", "Details", new { id=item.USER_ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.USER_ID }) |
             @Html.ActionLink("Cấp quyền", "Index","USER_PERMISSIONS", new { id = item.USER_ID },null)
+            @Html.ActionLink("Thêm thông tin", "Create", "USER_METAS")
         </td>
     </tr>
 }
