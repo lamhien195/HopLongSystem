@@ -4,25 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="56226594d7894d0e84c5f8a7bdfdd54f" Name="Diagram1">
-        <EntityTypeShape EntityType="Demo_DatabaseModel.BANG_CHAM_CONG" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.BANG_LUONG" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.DEPARTMENT" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.GHI_CHU_CONG_VIEC" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.LIST_CONTROLLERS" Width="1.5" PointX="1.5" PointY="22.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.LIST_PERMISSIONS" Width="1.5" PointX="3.75" PointY="22.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.USER_METAS" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.USER_PERMISSION" Width="1.5" PointX="6" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Demo_DatabaseModel.USER" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__BANG_CHAM__USER___1FCDBCEB" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__BANG_LUON__USER___1CF15040" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__DEPARTMEN__MANAG__25869641" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__USER_META__DEPAR__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__GHI_CHU_C__USER___22AA2996" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__LIST_PERM__CONTR__164452B1" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__USER_PERM__PERMI__1920BF5C" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__USER_META__USER___276EDEB3" ManuallyRouted="false" />
-        <AssociationConnector Association="Demo_DatabaseModel.FK__USER_PERM__USER___1A14E395" ManuallyRouted="false" />
+      <Diagram DiagramId="1161f48f77f74db99c02bcf0814d2ba1" Name="Diagram1">
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.BANG_CHAM_CONG" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.BANG_LUONG" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.DEPARTMENT" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.GHI_CHU_CONG_VIEC" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.LIST_CONTROLLERS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.LIST_PERMISSIONS" Width="1.5" PointX="3.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.USER_PERMISSION" Width="1.5" PointX="6" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.USER" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SYSTEM_DATABASEModel.USER_METAS" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__BANG_CHAM__USER___1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__BANG_LUON__USER___1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__DEPARTMEN__MANAG__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__USER_META__DEPAR__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__GHI_CHU_C__USER___49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__USER_PERM__PERMI__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__USER_PERM__USER___2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK__USER_META__USER___71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="SYSTEM_DATABASEModel.FK_LIST_PERMISSIONS_LIST_CONTROLLERS" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

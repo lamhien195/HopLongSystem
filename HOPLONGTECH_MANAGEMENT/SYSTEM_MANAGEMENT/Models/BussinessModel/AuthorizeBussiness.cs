@@ -8,7 +8,7 @@ namespace SYSTEM_MANAGEMENT.Models.BussinessModel
 {
     public class AuthorizeBussiness: ActionFilterAttribute
     {
-        Demo_DatabaseEntities db = new Demo_DatabaseEntities();
+        SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             if(HttpContext.Current.Session["USER_ID"] == null)

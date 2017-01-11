@@ -14,7 +14,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
     [AuthorizeBussiness]
     public class GHI_CHU_CONG_VIECController : Controller
     {
-        private Demo_DatabaseEntities db = new Demo_DatabaseEntities();
+        private SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
         // GET: GHI_CHU_CONG_VIEC
         public ActionResult Index(int? id)
         {

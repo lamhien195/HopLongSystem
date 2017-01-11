@@ -15,7 +15,7 @@ namespace SYSTEM_MANAGEMENT.Controllers.Import_File
     public class ImportBangChamCongController : Controller
     {
         int so_dong_thanh_cong = 0;
-        Demo_DatabaseEntities db = new Demo_DatabaseEntities();
+        SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
         // GET: ImportBangChamCong
         public ActionResult Index()
         {

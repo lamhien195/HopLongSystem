@@ -271,12 +271,6 @@
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PermissionAction.cs" />
-    <Compile Include="Models\SHOW_USER_METAS_Result.cs">
-      <DependentUpon>database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SHOW_USER_METAS_Result1.cs">
-      <DependentUpon>database.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\USER.cs">
       <DependentUpon>database.tt</DependentUpon>
     </Compile>

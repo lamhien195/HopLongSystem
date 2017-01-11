@@ -16,7 +16,7 @@ namespace SYSTEM_MANAGEMENT.Controllers.Import_File
     {
 
 
-        Demo_DatabaseEntities db = new Demo_DatabaseEntities();
+        SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
         // GET: ImportBangLuong
         public ActionResult Index()
         {

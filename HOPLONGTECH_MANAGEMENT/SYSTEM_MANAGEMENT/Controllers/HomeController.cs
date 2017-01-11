@@ -11,7 +11,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
     
     public class HomeController : Controller
     {
-        Demo_DatabaseEntities db = new Demo_DatabaseEntities();
+        SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
         public ActionResult Index()
         {
             return RedirectToAction("Index","GHI_CHU_CONG_VIEC", new { id = Session["USER_ID"], is_admin = Session["IS_ADMIN"] });

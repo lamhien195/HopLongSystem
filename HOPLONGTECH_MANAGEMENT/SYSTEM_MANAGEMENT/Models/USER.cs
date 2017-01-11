@@ -21,8 +21,8 @@ namespace SYSTEM_MANAGEMENT.Models
             this.BANG_LUONG = new HashSet<BANG_LUONG>();
             this.DEPARTMENTS = new HashSet<DEPARTMENT>();
             this.GHI_CHU_CONG_VIEC = new HashSet<GHI_CHU_CONG_VIEC>();
-            this.USER_METAS = new HashSet<USER_METAS>();
             this.USER_PERMISSION = new HashSet<USER_PERMISSION>();
+            this.USER_METAS = new HashSet<USER_METAS>();
         }
     
         public int USER_ID { get; set; }
@@ -43,8 +43,8 @@ namespace SYSTEM_MANAGEMENT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GHI_CHU_CONG_VIEC> GHI_CHU_CONG_VIEC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USER_METAS> USER_METAS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER_PERMISSION> USER_PERMISSION { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<USER_METAS> USER_METAS { get; set; }
     }
 }
