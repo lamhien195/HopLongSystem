@@ -95,6 +95,7 @@
                                 <li>
                                     <a href="#"><i class="fa fa-bug"></i> Thông tin cá nhân <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
+                                        <li>@Html.ActionLink("Thông tin cá nhân", "Index", "USER_METAS", new { id = Session["USER_ID"] }, null)</li>
                                         <li>@Html.ActionLink("Đổi mật khẩu", "ChangePassword", "USERs")</li>
 
                                     </ul>

@@ -14,7 +14,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
     [AuthorizeBussiness]
     public class LIST_CONTROLLERSController : Controller
     {
-        private SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
+        private Demo_DatabaseEntities db = new Demo_DatabaseEntities();
 
 
         public ActionResult Update_Controller_Info()

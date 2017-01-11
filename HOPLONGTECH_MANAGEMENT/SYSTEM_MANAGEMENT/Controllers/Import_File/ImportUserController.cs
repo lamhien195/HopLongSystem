@@ -14,7 +14,7 @@ namespace SYSTEM_MANAGEMENT.Controllers.Import_File
     [AuthorizeBussiness]
     public class ImportUserController : Controller
     {
-        SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
+        Demo_DatabaseEntities db = new Demo_DatabaseEntities();
         // GET: ImportUser
         public ActionResult Index()
         {

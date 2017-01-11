@@ -14,7 +14,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
     [AuthorizeBussiness]
     public class LIST_PERMISSIONSController : Controller
     {
-        private SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
+        private Demo_DatabaseEntities db = new Demo_DatabaseEntities();
 
         // GET: LIST_PERMISSIONS
         public ActionResult Index(String ID)

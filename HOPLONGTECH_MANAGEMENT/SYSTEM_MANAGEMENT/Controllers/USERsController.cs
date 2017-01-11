@@ -14,7 +14,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
     [AuthorizeBussiness]
     public class USERsController : Controller
     {
-        private SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
+        private Demo_DatabaseEntities db = new Demo_DatabaseEntities();
 
         // GET: USERs
         public ActionResult Index()

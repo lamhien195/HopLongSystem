@@ -12,11 +12,13 @@ namespace SYSTEM_MANAGEMENT.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class SYSTEM_DATABASEEntities : DbContext
+    public partial class Demo_DatabaseEntities : DbContext
     {
-        public SYSTEM_DATABASEEntities()
-            : base("name=SYSTEM_DATABASEEntities")
+        public Demo_DatabaseEntities()
+            : base("name=Demo_DatabaseEntities")
         {
         }
     
@@ -27,10 +29,21 @@ namespace SYSTEM_MANAGEMENT.Models
     
         public virtual DbSet<BANG_CHAM_CONG> BANG_CHAM_CONG { get; set; }
         public virtual DbSet<BANG_LUONG> BANG_LUONG { get; set; }
+        public virtual DbSet<DEPARTMENT> DEPARTMENTS { get; set; }
+        public virtual DbSet<GHI_CHU_CONG_VIEC> GHI_CHU_CONG_VIEC { get; set; }
         public virtual DbSet<LIST_CONTROLLERS> LIST_CONTROLLERS { get; set; }
         public virtual DbSet<LIST_PERMISSIONS> LIST_PERMISSIONS { get; set; }
+        public virtual DbSet<USER_METAS> USER_METAS { get; set; }
         public virtual DbSet<USER_PERMISSION> USER_PERMISSION { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
-        public virtual DbSet<GHI_CHU_CONG_VIEC> GHI_CHU_CONG_VIEC { get; set; }
+    
+        public virtual ObjectResult<SHOW_USER_METAS_Result1> SHOW_USER_METAS(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SHOW_USER_METAS_Result1>("SHOW_USER_METAS", idParameter);
+        }
     }
 }

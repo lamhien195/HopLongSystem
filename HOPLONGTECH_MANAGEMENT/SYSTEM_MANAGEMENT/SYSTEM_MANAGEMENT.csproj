@@ -227,51 +227,64 @@
     <Compile Include="Controllers\LIST_CONTROLLERSController.cs" />
     <Compile Include="Controllers\LIST_PERMISSIONSController.cs" />
     <Compile Include="Controllers\USERsController.cs" />
+    <Compile Include="Controllers\USER_METASController.cs" />
     <Compile Include="Controllers\USER_PERMISSIONSController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BANG_CHAM_CONG.cs">
-      <DependentUpon>System_management.tt</DependentUpon>
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BANG_LUONG.cs">
-      <DependentUpon>System_management.tt</DependentUpon>
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BussinessModel\AuthorizeBussiness.cs" />
     <Compile Include="Models\BussinessModel\ReflectionController.cs" />
+    <Compile Include="Models\database.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>database.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>database.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DEPARTMENT.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\GHI_CHU_CONG_VIEC.cs">
-      <DependentUpon>System_management.tt</DependentUpon>
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LIST_CONTROLLERS.cs">
-      <DependentUpon>System_management.tt</DependentUpon>
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LIST_PERMISSIONS.cs">
-      <DependentUpon>System_management.tt</DependentUpon>
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PermissionAction.cs" />
-    <Compile Include="Models\System_management.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>System_management.Context.tt</DependentUpon>
+    <Compile Include="Models\SHOW_USER_METAS_Result.cs">
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\System_management.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>System_management.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\System_management.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>System_management.edmx</DependentUpon>
+    <Compile Include="Models\SHOW_USER_METAS_Result1.cs">
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USER.cs">
-      <DependentUpon>System_management.tt</DependentUpon>
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USER_METAS.cs">
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USER_PERMISSION.cs">
-      <DependentUpon>System_management.tt</DependentUpon>
+      <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -286,27 +299,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\System_management.Context.tt">
+    <Content Include="Models\database.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>System_management.edmx</DependentUpon>
-      <LastGenOutput>System_management.Context.cs</LastGenOutput>
+      <DependentUpon>database.edmx</DependentUpon>
+      <LastGenOutput>database.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\System_management.tt">
+    <Content Include="Models\database.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>System_management.edmx</DependentUpon>
-      <LastGenOutput>System_management.cs</LastGenOutput>
+      <DependentUpon>database.edmx</DependentUpon>
+      <LastGenOutput>database.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\System_management.edmx">
+    <EntityDeploy Include="Models\database.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>System_management.Designer.cs</LastGenOutput>
+      <LastGenOutput>database.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\System_management.edmx.diagram">
-      <DependentUpon>System_management.edmx</DependentUpon>
+    <Content Include="Models\database.edmx.diagram">
+      <DependentUpon>database.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -379,6 +392,11 @@
     <Content Include="Views\GHI_CHU_CONG_VIEC\Index.cshtml" />
     <Content Include="Views\GHI_CHU_CONG_VIEC\Danh_Sach_Ghi_CHu.cshtml" />
     <Content Include="Views\USERs\ChangePassword.cshtml" />
+    <Content Include="Views\USER_METAS\Create.cshtml" />
+    <Content Include="Views\USER_METAS\Delete.cshtml" />
+    <Content Include="Views\USER_METAS\Details.cshtml" />
+    <Content Include="Views\USER_METAS\Edit.cshtml" />
+    <Content Include="Views\USER_METAS\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
