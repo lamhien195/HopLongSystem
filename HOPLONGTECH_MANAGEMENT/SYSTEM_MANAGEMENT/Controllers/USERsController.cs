@@ -14,13 +14,15 @@ namespace SYSTEM_MANAGEMENT.Controllers
     [AuthorizeBussiness]
     public class USERsController : Controller
     {
-        private SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
+        private SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
 
         // GET: USERs
         public ActionResult Index()
         {
             return View(db.USERS.ToList());
         }
+
+        
 
         // GET: USERs/Details/5
         public ActionResult Details(int? id)

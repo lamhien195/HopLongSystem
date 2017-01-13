@@ -19,10 +19,15 @@ namespace SYSTEM_MANAGEMENT.Models
         {
             this.BANG_CHAM_CONG = new HashSet<BANG_CHAM_CONG>();
             this.BANG_LUONG = new HashSet<BANG_LUONG>();
+            this.CUSTOMERS = new HashSet<CUSTOMER>();
             this.DEPARTMENTS = new HashSet<DEPARTMENT>();
             this.GHI_CHU_CONG_VIEC = new HashSet<GHI_CHU_CONG_VIEC>();
-            this.USER_PERMISSION = new HashSet<USER_PERMISSION>();
+            this.MANAGE_SALES_AND_CUSTOMERS = new HashSet<MANAGE_SALES_AND_CUSTOMERS>();
+            this.PURCHASE_ORDER = new HashSet<PURCHASE_ORDER>();
+            this.SUPPLIERS = new HashSet<SUPPLIER>();
             this.USER_METAS = new HashSet<USER_METAS>();
+            this.USER_PERMISSION = new HashSet<USER_PERMISSION>();
+            this.HOLD_PRODUCT_DETAILS = new HashSet<HOLD_PRODUCT_DETAILS>();
         }
     
         public int USER_ID { get; set; }
@@ -39,12 +44,22 @@ namespace SYSTEM_MANAGEMENT.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BANG_LUONG> BANG_LUONG { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CUSTOMER> CUSTOMERS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DEPARTMENT> DEPARTMENTS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GHI_CHU_CONG_VIEC> GHI_CHU_CONG_VIEC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USER_PERMISSION> USER_PERMISSION { get; set; }
+        public virtual ICollection<MANAGE_SALES_AND_CUSTOMERS> MANAGE_SALES_AND_CUSTOMERS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PURCHASE_ORDER> PURCHASE_ORDER { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SUPPLIER> SUPPLIERS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER_METAS> USER_METAS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<USER_PERMISSION> USER_PERMISSION { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOLD_PRODUCT_DETAILS> HOLD_PRODUCT_DETAILS { get; set; }
     }
 }

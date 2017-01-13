@@ -25,8 +25,8 @@ namespace SYSTEM_MANAGEMENT.Models
         public string DESCRIPTION { get; set; }
         public string CONTROLLER_ID { get; set; }
     
+        public virtual LIST_CONTROLLERS LIST_CONTROLLERS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER_PERMISSION> USER_PERMISSION { get; set; }
-        public virtual LIST_CONTROLLERS LIST_CONTROLLERS { get; set; }
     }
 }

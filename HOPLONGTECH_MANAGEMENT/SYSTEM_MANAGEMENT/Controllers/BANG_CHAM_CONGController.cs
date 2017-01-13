@@ -16,7 +16,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
     [AuthorizeBussiness]
     public class BANG_CHAM_CONGController : Controller
     {
-        private SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
+        private SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
 
         // GET: BANG_CHAM_CONG
         public ActionResult Index(int? id)

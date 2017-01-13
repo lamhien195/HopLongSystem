@@ -219,6 +219,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\BANG_CHAM_CONGController.cs" />
     <Compile Include="Controllers\BANG_LUONGController.cs" />
+    <Compile Include="Controllers\DEPARTMENTsController.cs" />
     <Compile Include="Controllers\GHI_CHU_CONG_VIECController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Import_File\ImportBangChamCongController.cs" />
@@ -241,6 +242,18 @@
     </Compile>
     <Compile Include="Models\BussinessModel\AuthorizeBussiness.cs" />
     <Compile Include="Models\BussinessModel\ReflectionController.cs" />
+    <Compile Include="Models\CUSTOMER.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CUSTOMER_ACCOUNTS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CUSTOMER_CONTACTS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CUSTOMER_GROUPS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\database.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,6 +275,12 @@
     <Compile Include="Models\GHI_CHU_CONG_VIEC.cs">
       <DependentUpon>database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HOLD_PRODUCTS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HOLD_PRODUCT_DETAILS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LIST_CONTROLLERS.cs">
       <DependentUpon>database.tt</DependentUpon>
@@ -270,7 +289,40 @@
       <DependentUpon>database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MANAGE_SALES_AND_CUSTOMERS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAYMENT_TERMS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PermissionAction.cs" />
+    <Compile Include="Models\PRODUCT.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRODUCT_CATEGORIES.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRODUCT_CATEGORY_DETAILS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRODUCT_META.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PURCHASE_ORDER.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUPPLIER.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUPPLIER_ACCOUNTS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUPPLIER_CONTACTS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TRANSFER_WAREHOUSE_PRODUCTS.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\USER.cs">
       <DependentUpon>database.tt</DependentUpon>
     </Compile>
@@ -280,6 +332,10 @@
     <Compile Include="Models\USER_PERMISSION.cs">
       <DependentUpon>database.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Warehouse.cs">
+      <DependentUpon>database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\XuLyModel\XuLyNgayThang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -391,6 +447,17 @@
     <Content Include="Views\USER_METAS\Details.cshtml" />
     <Content Include="Views\USER_METAS\Edit.cshtml" />
     <Content Include="Views\USER_METAS\Index.cshtml" />
+    <Content Include="Views\ImportBangChamCong\Update.cshtml" />
+    <Content Include="Views\ImportBangLuong\Update.cshtml" />
+    <Content Include="Views\ImportUser\Update.cshtml" />
+    <Content Include="Views\ImportUser\Update_UserMetas.cshtml" />
+    <Content Include="Views\ImportUser\Import_UserMetas.cshtml" />
+    <Content Include="Views\DEPARTMENTs\Create.cshtml" />
+    <Content Include="Views\DEPARTMENTs\Delete.cshtml" />
+    <Content Include="Views\DEPARTMENTs\Details.cshtml" />
+    <Content Include="Views\DEPARTMENTs\Edit.cshtml" />
+    <Content Include="Views\DEPARTMENTs\Index.cshtml" />
+    <Content Include="Views\DEPARTMENTs\Department_Users.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

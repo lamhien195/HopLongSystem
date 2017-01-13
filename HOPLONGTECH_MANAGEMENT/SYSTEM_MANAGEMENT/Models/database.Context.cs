@@ -13,10 +13,10 @@ namespace SYSTEM_MANAGEMENT.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SYSTEM_DATABASEEntities1 : DbContext
+    public partial class SYSTEM_DATABASEEntities : DbContext
     {
-        public SYSTEM_DATABASEEntities1()
-            : base("name=SYSTEM_DATABASEEntities1")
+        public SYSTEM_DATABASEEntities()
+            : base("name=SYSTEM_DATABASEEntities")
         {
         }
     
@@ -27,12 +27,30 @@ namespace SYSTEM_MANAGEMENT.Models
     
         public virtual DbSet<BANG_CHAM_CONG> BANG_CHAM_CONG { get; set; }
         public virtual DbSet<BANG_LUONG> BANG_LUONG { get; set; }
+        public virtual DbSet<CUSTOMER_ACCOUNTS> CUSTOMER_ACCOUNTS { get; set; }
+        public virtual DbSet<CUSTOMER_CONTACTS> CUSTOMER_CONTACTS { get; set; }
+        public virtual DbSet<CUSTOMER_GROUPS> CUSTOMER_GROUPS { get; set; }
+        public virtual DbSet<CUSTOMER> CUSTOMERS { get; set; }
         public virtual DbSet<DEPARTMENT> DEPARTMENTS { get; set; }
         public virtual DbSet<GHI_CHU_CONG_VIEC> GHI_CHU_CONG_VIEC { get; set; }
+        public virtual DbSet<HOLD_PRODUCTS> HOLD_PRODUCTS { get; set; }
         public virtual DbSet<LIST_CONTROLLERS> LIST_CONTROLLERS { get; set; }
         public virtual DbSet<LIST_PERMISSIONS> LIST_PERMISSIONS { get; set; }
+        public virtual DbSet<MANAGE_SALES_AND_CUSTOMERS> MANAGE_SALES_AND_CUSTOMERS { get; set; }
+        public virtual DbSet<PAYMENT_TERMS> PAYMENT_TERMS { get; set; }
+        public virtual DbSet<PRODUCT_CATEGORIES> PRODUCT_CATEGORIES { get; set; }
+        public virtual DbSet<PRODUCT_CATEGORY_DETAILS> PRODUCT_CATEGORY_DETAILS { get; set; }
+        public virtual DbSet<PRODUCT_META> PRODUCT_META { get; set; }
+        public virtual DbSet<PRODUCT> PRODUCTS { get; set; }
+        public virtual DbSet<PURCHASE_ORDER> PURCHASE_ORDER { get; set; }
+        public virtual DbSet<SUPPLIER_ACCOUNTS> SUPPLIER_ACCOUNTS { get; set; }
+        public virtual DbSet<SUPPLIER_CONTACTS> SUPPLIER_CONTACTS { get; set; }
+        public virtual DbSet<SUPPLIER> SUPPLIERS { get; set; }
+        public virtual DbSet<TRANSFER_WAREHOUSE_PRODUCTS> TRANSFER_WAREHOUSE_PRODUCTS { get; set; }
+        public virtual DbSet<USER_METAS> USER_METAS { get; set; }
         public virtual DbSet<USER_PERMISSION> USER_PERMISSION { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
-        public virtual DbSet<USER_METAS> USER_METAS { get; set; }
+        public virtual DbSet<Warehouse> WAREHOUSES { get; set; }
+        public virtual DbSet<HOLD_PRODUCT_DETAILS> HOLD_PRODUCT_DETAILS { get; set; }
     }
 }

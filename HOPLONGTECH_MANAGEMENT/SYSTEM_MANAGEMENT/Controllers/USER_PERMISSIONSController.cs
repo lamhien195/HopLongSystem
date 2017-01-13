@@ -11,7 +11,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
     [AuthorizeBussiness]
     public class USER_PERMISSIONSController : Controller
     {
-        SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
+        SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
         // GET: USER_PERMISSIONS
         public ActionResult Index(int? id)
         {

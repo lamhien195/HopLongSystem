@@ -75,20 +75,51 @@
                         <div class="menu_section">
                             <h3>Quản Trị</h3>
                             <ul class="nav side-menu">
+                                <!-- Hệ thống-->
                                 <li>
                                     <a><i class="fa fa-home"></i> Hệ thống <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="/USERs/Index">Người dùng</a></li>
+                                        <li><a href="/DEPARTMENTs/Index">Phòng ban</a></li>
                                         <li><a href="/LIST_CONTROLLERS/Index">Chức năng</a></li>
+                                        <li><a href="/GHI_CHU_CONG_VIEC/Danh_Sach_Ghi_CHu"> Ghi chú <span class="fa fa-chevron-down"></span></a></li>
                                     </ul>
                                 </li>
+                                <!-- Import file-->
                                 <li>
-                                    <a href="/GHI_CHU_CONG_VIEC/Danh_Sach_Ghi_CHu"><i class="fa fa-sitemap"></i> Ghi chú <span class="fa fa-chevron-down"></span></a>
-                                    
+                                    <a href="javascript:void(0)"><i class="fa fa-laptop"></i> Import file <span class="label label-success pull-right">Mới</span></a>
+                                    <ul class="nav child_menu">
+                                        <li>
+                                            <a href="javascript:void(0)"> Bảng chấm công </a>
+                                            <ul class="nav child_menu">
+                                                <li><a href="/ImportBangChamCong/Index">Import bảng chấm công</a></li>
+                                                <li>@Html.ActionLink("Update bảng chấm công", "Update", "ImportBangChamCong")</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"> Bảng lương </a>
+                                            <ul class="nav child_menu">
+                                                <li><a href="/ImportBangLuong/Index">Import Bảng lương</a></li>
+                                                <li><a href="/ImportBangLuong/Update">Update bảng lương</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"> Users </a>
+                                            <ul class="nav child_menu">
+                                                <li><a href="/ImportUser/Index">Import users</a></li>
+                                                <li><a href="/ImportUser/Update">Update users</a></li>
+                                                <li><a href="/ImportUser/Import_UserMetas">Import user's metas</a></li>
+                                                <li><a href="/ImportUser/Update_UserMetas">Update user's metas</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
                                 </li>
+                                
                             </ul>
                                 
                         </div>
+                        <!-- Trang cá nhân-->
                         <div class="menu_section">
                             <h3>Trang cá nhân</h3>
                             <ul class="nav side-menu">
@@ -97,14 +128,9 @@
                                     <ul class="nav child_menu">
                                         <li>@Html.ActionLink("Thông tin cá nhân", "Index", "USER_METAS", new { id = Session["USER_ID"] }, null)</li>
                                         <li>@Html.ActionLink("Đổi mật khẩu", "ChangePassword", "USERs")</li>
-
+                                        <li><a href="/GHI_CHU_CONG_VIEC/Index/@Session["USER_ID"]"> Ghi chú cá nhân <span class="fa fa-chevron-down"></span></a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="/GHI_CHU_CONG_VIEC/Index/@Session["USER_ID"]"><i class="fa fa-bug"></i> Ghi chú cá nhân <span class="fa fa-chevron-down"></span></a>
-                                </li>
-                                    
-                                
                                 <li></li>
                                 
                                 <li>
@@ -117,15 +143,10 @@
                                         
                                     </ul>
                                 </li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Import file <span class="label label-success pull-right">Mới</span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="/ImportBangChamCong/Index">Bảng chấm công</a></li>
-                                        <li><a href="/ImportBangLuong/Index">Bảng lương</a></li>
-                                        <li><a href="/ImportUser/Index">Người dùng</a></li>
-                                    </ul>
-                                </li>
+                                
                             </ul>
                         </div>
+                        <!-- End Trang cá nhân-->
                     </div>
                     <!-- /sidebar menu -->
                     <!-- /menu footer buttons -->

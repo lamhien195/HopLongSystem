@@ -12,7 +12,7 @@ namespace SYSTEM_MANAGEMENT.Controllers
 {
     public class USER_METASController : Controller
     {
-        private SYSTEM_DATABASEEntities1 db = new SYSTEM_DATABASEEntities1();
+        private SYSTEM_DATABASEEntities db = new SYSTEM_DATABASEEntities();
 
         // GET: USER_METAS
         public ActionResult Index(int? id)

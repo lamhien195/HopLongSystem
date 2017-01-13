@@ -8,7 +8,7 @@
 @using (Html.BeginForm("Index", "ImportUser", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <input type="file" name="file" style="width:400px " />
-    <p></p>
+    <br />
     <input type="submit" value="Save" />
     <p style="color:blue">@ViewBag.Message</p>
 }

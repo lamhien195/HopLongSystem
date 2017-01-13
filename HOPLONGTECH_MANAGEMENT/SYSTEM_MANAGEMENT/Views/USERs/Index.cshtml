@@ -45,11 +45,11 @@
             @Html.DisplayFor(modelItem => item.ALLOWED)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.USER_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.USER_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.USER_ID }) |
-            @Html.ActionLink("Cấp quyền", "Index","USER_PERMISSIONS", new { id = item.USER_ID },null)
-            @Html.ActionLink("Thêm thông tin", "Create", "USER_METAS")
+            <a href="/USERs/Edit/@item.USER_ID"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="/USERs/Details/@item.USER_ID"><i class="fa fa-info-circle" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="/USERs/Delete/@item.USER_ID"><i class="fa fa-trash-o" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="/USER_PERMISSIONS/Index/@item.USER_ID"><i class="fa fa-cog" aria-hidden="true"></i></a> &nbsp;&nbsp;
+            <a href="/USER_METAS/Index/@item.USER_ID"><i class="fa fa-user-plus" aria-hidden="true"></i></a> &nbsp;&nbsp;
         </td>
     </tr>
 }
