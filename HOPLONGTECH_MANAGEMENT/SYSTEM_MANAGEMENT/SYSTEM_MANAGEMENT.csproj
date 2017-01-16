@@ -217,6 +217,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\HopLong\Controllers\PRODUCTsController.cs" />
+    <Compile Include="Areas\HopLong\Controllers\PRODUCT_CATEGORIESController.cs" />
+    <Compile Include="Areas\HopLong\Controllers\PRODUCT_CATEGORY_DETAILSController.cs" />
+    <Compile Include="Areas\HopLong\Controllers\WarehousesController.cs" />
+    <Compile Include="Areas\HopLong\HopLongAreaRegistration.cs" />
     <Compile Include="Controllers\BANG_CHAM_CONGController.cs" />
     <Compile Include="Controllers\BANG_LUONGController.cs" />
     <Compile Include="Controllers\DEPARTMENTsController.cs" />
@@ -371,6 +376,30 @@
     <Content Include="Models\database.edmx.diagram">
       <DependentUpon>database.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\HopLong\Views\web.config" />
+    <Content Include="Areas\HopLong\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\HopLong\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORIES\Create.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORIES\Delete.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORIES\Details.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORIES\Edit.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORIES\Index.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORY_DETAILS\Create.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORY_DETAILS\Delete.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORY_DETAILS\Details.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORY_DETAILS\Edit.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORY_DETAILS\Index.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCTs\Create.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCTs\Delete.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCTs\Details.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCTs\Edit.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCTs\Index.cshtml" />
+    <Content Include="Areas\HopLong\Views\PRODUCT_CATEGORIES\list_product_category_details.cshtml" />
+    <Content Include="Areas\HopLong\Views\Warehouses\Create.cshtml" />
+    <Content Include="Areas\HopLong\Views\Warehouses\Delete.cshtml" />
+    <Content Include="Areas\HopLong\Views\Warehouses\Details.cshtml" />
+    <Content Include="Areas\HopLong\Views\Warehouses\Edit.cshtml" />
+    <Content Include="Areas\HopLong\Views\Warehouses\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -461,6 +490,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\HopLong\Models\" />
     <Folder Include="Content\build\" />
     <Folder Include="Content\js\" />
     <Folder Include="vendors\" />

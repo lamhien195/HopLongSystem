@@ -1,11 +1,4 @@
-﻿@{ 
-    if(Session["USER_ID"]== null)
-    {
-        Response.Redirect("~/Home/Login");
-    }
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>@ViewBag.Title - Hợp Long Management </title>
+    <title>@ViewBag.Title - Nội Bộ Hợp Long </title>
     <!-- Bootstrap -->
     <link href="~/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -34,7 +27,7 @@
     <script src="~/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="~/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    
+
 
 </head>
 <body class="nav-md">
@@ -53,9 +46,9 @@
                                 </td>
                             </tr>
                         </table>
-                        
-                        
-                        
+
+
+
                     </div>
                     <div class="clearfix"></div>
                     <!-- menu profile quick info -->
@@ -72,98 +65,55 @@
                     <br />
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                        <hr />
-                        <div class="menu_section">
-                            <h3>Quản Trị</h3>
-                            <ul class="nav side-menu">
-                                <!-- Hệ thống-->
-                                <li>
-                                    <a><i class="fa fa-home"></i> Hệ thống <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="/USERs/Index">Người dùng</a></li>
-                                        <li><a href="/DEPARTMENTs/Index">Phòng ban</a></li>
-                                        <li><a href="/LIST_CONTROLLERS/Index">Chức năng</a></li>
-                                        <li><a href="/GHI_CHU_CONG_VIEC/Danh_Sach_Ghi_CHu"> Ghi chú <span class="fa fa-chevron-down"></span></a></li>
-                                        <li><a href="~/HopLong/PRODUCT_CATEGORIES/Index"> Sản phẩm <span class="fa fa-chevron-down"></span></a></li>
-                                    </ul>
-                                </li>
-                                <!-- Import file-->
-                                <li>
-                                    <a href="javascript:void(0)"><i class="fa fa-laptop"></i> Import file <span class="label label-success pull-right">Mới</span></a>
-                                    <ul class="nav child_menu">
-                                        <li>
-                                            <a href="javascript:void(0)"> Bảng chấm công </a>
-                                            <ul class="nav child_menu">
-                                                <li><a href="/ImportBangChamCong/Index">Import bảng chấm công</a></li>
-                                                <li>@Html.ActionLink("Update bảng chấm công", "Update", "ImportBangChamCong")</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)"> Bảng lương </a>
-                                            <ul class="nav child_menu">
-                                                <li><a href="/ImportBangLuong/Index">Import Bảng lương</a></li>
-                                                <li><a href="/ImportBangLuong/Update">Update bảng lương</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)"> Users </a>
-                                            <ul class="nav child_menu">
-                                                <li><a href="/ImportUser/Index">Import users</a></li>
-                                                <li><a href="/ImportUser/Update">Update users</a></li>
-                                                <li><a href="/ImportUser/Import_UserMetas">Import user's metas</a></li>
-                                                <li><a href="/ImportUser/Update_UserMetas">Update user's metas</a></li>
-                                            </ul>
-                                        </li>
 
-                                    </ul>
-                                </li>
-                                
-                            </ul>
-                                
-                        </div>
-                        <hr />
-                        <!-- Hệ thống-->
+                        <!-- Phòng kinh doanh-->
                         <div class="menu_section">
-                            <h3>Công việc</h3>
+                            <h3>Phòng Kinh Doanh</h3>
                             <ul class="nav side-menu">
-                                <!-- Hợp Long-->
-                                <li><a href="~/HopLong/PRODUCT_CATEGORIES/Index"><img src="~/Content/images/logo.png" width="40" height="40" /> Hợp Long </a></li>
-                                <li><a href="~/HopLong/PRODUCT_CATEGORIES/Index"><img src="~/Content/images/truonganlogo.png" width="40" height="30" /> Trường An </a></li>
-                            </ul>
-
-                        </div>
-                        <!-- End Hệ thống-->
-                        <hr />
-                        <!-- Trang cá nhân-->
-                        <div class="menu_section">
-                            <h3>Trang cá nhân</h3>
-                            <ul class="nav side-menu">
-                                <li>
-                                    <a href="#"><i class="fa fa-bug"></i> Thông tin cá nhân <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li>@Html.ActionLink("Thông tin cá nhân", "Index", "USER_METAS", new { id = Session["USER_ID"] }, null)</li>
-                                        <li>@Html.ActionLink("Đổi mật khẩu", "ChangePassword", "USERs")</li>
-                                        <li><a href="/GHI_CHU_CONG_VIEC/Index/@Session["USER_ID"]"> Ghi chú cá nhân <span class="fa fa-chevron-down"></span></a></li>
-                                    </ul>
-                                </li>
                                 <li></li>
-                                
-                                <li>
-                                    <a><i class="fa fa-sitemap"></i> Lương <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li>@Html.ActionLink("Chấm công", "Index", "BANG_CHAM_CONG", new { id = Session["USER_ID"] }, null)</li>
-                                        <li>
-                                            @Html.ActionLink("Bảng lương", "Index", "BANG_LUONG", new { id = Session["USER_ID"] }, null)
-                                        </li>
-                                        
-                                    </ul>
-                                </li>
-                                
+                                <li></li>
                             </ul>
                         </div>
-                        <!-- End Trang cá nhân-->
-                        <hr />
-                        
+                        <!-- End Phòng Kinh Doanh-->
+                        <!-- Phòng Mua Hàng-->
+                        <div class="menu_section">
+                            <h3>Phòng Mua Hàng</h3>
+                            <ul class="nav side-menu">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            </ul>
+                        </div>
+                        <!-- End Phòng Mua Hàng-->
+                        <!-- Phòng Kế Toán-->
+                        <div class="menu_section">
+                            <h3>Phòng Kế Toán</h3>
+                            <ul class="nav side-menu">
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <!-- End Phòng Kế Toán-->
+                        <!-- Phòng Kho và giao nhận-->
+                        <div class="menu_section">
+                            
+                            <h3>Phòng Kho và Giao Nhận</h3>
+                            <ul class="nav side-menu">
+                                        <li></li>
+                                        <li></li>
+
+                                        <li>
+                                            <a><i class="fa fa-sitemap"></i> Vật tư hàng hóa <span class="fa fa-chevron-down"></span></a>
+                                            <ul class="nav child_menu">
+                                                <li><a href="~/HopLong/PRODUCT_CATEGORIES/Index"> Nhóm hàng <span class="fa fa-chevron-down"></span></a></li>
+                                                <li><a href="~/HopLong/PRODUCTs/Index"> Hàng hóa <span class="fa fa-chevron-down"></span></a></li>
+                                                <li><a href="~/HopLong/Warehouses/Index"> Danh Sách Kho <span class="fa fa-chevron-down"></span></a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                        </div>
+                        <!-- End Phòng Kho và giao nhận-->
                     </div>
                     <!-- /sidebar menu -->
                     <!-- /menu footer buttons -->
@@ -294,7 +244,7 @@
             <!-- /footer content -->
         </div>
     </div>
-    
+
     <!-- FastClick -->
     <script src="~/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
